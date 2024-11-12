@@ -9,6 +9,5 @@ import java.util.List;
  * Два метода для создания единичной машины по конструктору и листа из пяти машин
  */
 public interface ServiceCarIntf {
-    Car createCar(String make, String model, int year);
-    List<Car> createFiveCarCollection();
+    List<Car> getNumberOfCars(int count);
 }

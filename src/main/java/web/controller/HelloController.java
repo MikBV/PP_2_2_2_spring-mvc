@@ -22,8 +22,6 @@ public class HelloController {
 		messages.add("5.2.0 version by sep'19 ");
 
 		model.addAttribute("messages", messages);
-
-		model.addAttribute("cars", serviceCarIntf.createFiveCarCollection());
 		return "index";
 	}
 	

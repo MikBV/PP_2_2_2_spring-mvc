@@ -18,7 +18,7 @@ public class CarController {
         ServiceCarIntf carIntf = new CarServiceCar();
 
 
-        model.addAttribute("cars", carIntf.createFiveCarCollection());
+        model.addAttribute("cars", carIntf.getNumberOfCars(5));
         return "cars";
     }
 
