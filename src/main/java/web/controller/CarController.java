@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class CarController {
 
-    @GetMapping(value = "")
+    @GetMapping(value = "/car")
     public String printWelcome(ModelMap model) {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("Toyota","Corolla",2011));
