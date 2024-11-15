@@ -7,11 +7,19 @@
 </head>
 <body>
 <div>
-    <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
+<!--    <th:block th:each="msg : ${messages}">-->
+<!--        <h1 th:text="${msg}"></h1>-->
+<!--    </th:block>-->
+    <br>
     <a href="/cars">Get cars List</a>
-    <a href="/cars?count=1">Get cars List 11</a>
+    <br>
+    <br>
+    <h>Choose the number of cars to display:</h>
+    <form action="/cars" method="get">
+        <label for="count">Number of cars:</label>
+        <input type="number" id="count" name="count" min="0">
+        <button type="submit">Show Cars</button>
+    </form>
 
 
 </div>

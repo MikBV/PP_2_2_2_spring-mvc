@@ -1,24 +1,20 @@
 package web.controller;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import web.model.Car;
+import org.springframework.web.bind.annotation.RequestParam;
 import web.service.CarServiceCar;
 import web.service.ServiceCarIntf;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Controller
 public class CarController {
 
-    @GetMapping(value = "/car")
-    public String printWelcome(ModelMap model) {
+    @GetMapping(value = "/cars")
+    public String printCars (@RequestParam(value = "count", required = false) Integer count, Model model) {
         ServiceCarIntf carIntf = new CarServiceCar();
-
-
-        model.addAttribute("cars", carIntf.getNumberOfCars(5));
+        model.addAttribute("cars", carIntf.getNumberOfCars(count != null ? count : 5));
         return "cars";
     }
 
