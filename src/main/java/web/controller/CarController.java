@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.service.CarServiceCar;
 import web.service.ServiceCarIntf;
 
-
-
+/**
+ * Контроллер для страницы cars
+ */
 @Controller
 public class CarController {
 
@@ -17,6 +18,5 @@ public class CarController {
         model.addAttribute("cars", carIntf.getNumberOfCars(count != null ? count : 5));
         return "cars";
     }
-
 }
 

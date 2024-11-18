@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarServiceCar implements ServiceCarIntf {
+    /**
+     * Константа, поскольку по условиям я посчитал, что сохраняемые значения должны быть постоянны. Думал на тему
+     * статика, но решил, что у меня не настолько нагруженное приложение, чтобы статик поле коллекции давало преимущество.
+     */
     private final List<Car> FIVE_CAR_COLLECTION = new ArrayList<>(List.of(createCar("Toyota", "Corolla", 2011),
             createCar("Volkswagen", "Tuareg", 2012),
             createCar("Ford", "F150", 2017),

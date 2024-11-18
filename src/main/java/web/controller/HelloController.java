@@ -19,7 +19,6 @@ public class HelloController {
 		messages.add("Hello!");
 		messages.add("I'm Spring MVC application");
 		messages.add("5.2.0 version by sep'19 ");
-
 		model.addAttribute("messages", messages);
 		return "index";
 	}
